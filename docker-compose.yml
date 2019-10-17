@@ -1,0 +1,22 @@
+version: '3'
+services:
+    hf1:
+        image: ubuntu
+        hostname: hf1 
+        tty: true
+        networks:
+            - keepalived
+        cap_add:
+            - NET_ADMIN
+    hf2:
+        image: ubuntu
+        hostname: hf2 
+        tty: true
+        networks:
+            - keepalived
+        cap_add:
+            - NET_ADMIN
+
+networks:
+    keepalived:
+
